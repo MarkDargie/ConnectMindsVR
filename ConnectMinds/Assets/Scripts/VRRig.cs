@@ -20,19 +20,26 @@ public class VRMap
 public class VRRig : MonoBehaviour
 {
 
+    // Variables for VR Headset Objects
     public VRMap head;
     public VRMap leftHand;
     public VRMap rightHand;
 
-
+    // Variables for Rig Constraints
     public Transform headContraint;
     public Transform PositionSet;
     public Vector3 headBodyOffset;
+
+    // Variables for set VR Positioning 
+    public GameObject headsetPosition;
+    public Camera headsetCamera;
 
     // Start is called before the first frame update
     void Start()
     {
         headBodyOffset = transform.position - headContraint.position;
+
+        headsetCamera.transform.position = headsetPosition.transform.position;
     }
 
     // Update is called once per frame
@@ -44,8 +51,8 @@ public class VRRig : MonoBehaviour
         //transform.forward = Vector3.ProjectOnPlane(headContraint.up, Vector3.up).normalized;
 
         head.Map();
-        //leftHand.Map();
-        //rightHand.Map();
+        leftHand.Map();
+        rightHand.Map();
 
     }
 }
