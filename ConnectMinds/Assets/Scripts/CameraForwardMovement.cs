@@ -6,11 +6,13 @@ public class CameraForwardMovement : MonoBehaviour
 {
 
     public float moveSpeed = 1f;
-    public Camera camera;
+    private Camera camera;
 
     // Start is called before the first frame update
     void Start()
     {
+        //camera.stereoTargetEye = StereoTargetEyeMask.None;
+        camera = GetComponent<Camera>();
         camera.stereoTargetEye = StereoTargetEyeMask.None;
     }
 

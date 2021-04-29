@@ -34,12 +34,14 @@ public class VRRig : MonoBehaviour
     public GameObject headsetPosition;
     public Camera headsetCamera;
 
+
     // Start is called before the first frame update
     void Start()
     {
         headBodyOffset = transform.position - headContraint.position;
 
         headsetCamera.transform.position = headsetPosition.transform.position;
+
     }
 
     // Update is called once per frame
@@ -51,8 +53,8 @@ public class VRRig : MonoBehaviour
         //transform.forward = Vector3.ProjectOnPlane(headContraint.up, Vector3.up).normalized;
 
         head.Map();
-        leftHand.Map();
-        rightHand.Map();
+        //leftHand.Map();
+        //rightHand.Map();
 
     }
 }

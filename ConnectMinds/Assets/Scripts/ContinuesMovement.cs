@@ -40,7 +40,7 @@ public class ContinuesMovement : MonoBehaviour
 
         Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
 
-        Vector3 direction = new Vector3(inputAxis.x, 0, inputAxis.y);
+        Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
 
         character.Move(direction * Time.fixedDeltaTime * speed);
 
