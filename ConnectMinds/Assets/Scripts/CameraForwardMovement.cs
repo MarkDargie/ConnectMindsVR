@@ -13,7 +13,7 @@ public class CameraForwardMovement : MonoBehaviour
     {
         //camera.stereoTargetEye = StereoTargetEyeMask.None;
         camera = GetComponent<Camera>();
-        camera.stereoTargetEye = StereoTargetEyeMask.None;
+        //camera.stereoTargetEye = StereoTargetEyeMask.None;
     }
 
     // Update is called once per frame
