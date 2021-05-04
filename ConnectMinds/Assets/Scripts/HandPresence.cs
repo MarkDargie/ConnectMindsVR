@@ -64,22 +64,22 @@ public class HandPresence : MonoBehaviour
             spawnedController.SetActive(false);
         }
 
-        //targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue);
-        //if (primaryButtonValue)
-        //{
-        //    Debug.Log("Pressing Primary Button");
-        //}
+        targetdevice.trygetfeaturevalue(commonusages.primarybutton, out bool primarybuttonvalue);
+        if (primarybuttonvalue)
+        {
+            debug.log("pressing primary button");
+        }
 
-        //targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue);
-        //if(triggerValue > 0.1f)
-        //{
-        //    Debug.Log("Trigger Pressed " + triggerValue);
-        //}
+        targetdevice.trygetfeaturevalue(commonusages.trigger, out float triggervalue);
+        if (triggervalue > 0.1f)
+        {
+            debug.log("trigger pressed " + triggervalue);
+        }
 
-        //targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 primary2DAxisValue);
-        //if(primary2DAxisValue != Vector2.zero)
-        //{
-        //    Debug.Log("Primary Touchpad" + primary2DAxisValue);
-        //}
+        targetdevice.trygetfeaturevalue(commonusages.primary2daxis, out vector2 primary2daxisvalue);
+        if (primary2daxisvalue != vector2.zero)
+        {
+            debug.log("primary touchpad" + primary2daxisvalue);
+        }
     }
 }

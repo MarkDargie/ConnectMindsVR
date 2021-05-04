@@ -23,6 +23,7 @@ public class ContinuesMovement : MonoBehaviour
     {
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
+  
     }
 
     // Update is called once per frame

@@ -14,6 +14,7 @@ public class VRCamera : MonoBehaviour
     {
         camera = GetComponent<Camera>();
         camera.stereoTargetEye = StereoTargetEyeMask.Both;
+        //XRSettings.gameViewRenderMode = GameViewRenderMode.None;
         //XRSettings.gameViewRenderMode = GameViewRenderMode.BothEyes;
         //Camera.main.stereoTargetEye = StereoTargetEyeMask.Both;
     }
